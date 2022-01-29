@@ -5,7 +5,7 @@
 <div>
 	<p>The main goal of the project is to reproduce a Database for a Ecommerce Web Application;<br>
 		We have a Category-Product relation, so that One category can have Many Products (1:N);<br>
-		Some concepts are studied, like Persistence in memory, H2 database, Dependency injection, Serializable, Domain Drive Design, Object Oriented Programming, HTTP knowledge...</p>
+		Some concepts are studied, like Persistence in memory (JPA), H2 database, Dependency injection, Serializable, Domain Drive Design, Object Oriented Programming, HTTP knowledge...</p>
 </div>
 <div>
 	<p>The relationship is first set when the dependencies are imported as seen below.</p>
