@@ -1,15 +1,40 @@
 package com.dev.ecommerce.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-public class Category implements Serializable{
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+public class Category implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	
+
+	/*
+	 * Diz para não serializar a lista | Faz a conexão entre Products e Category
+	 * pelo nome do atributo
+	 */
+	@JsonIgnore
+	@OneToMany(mappedBy = "category")
+	private List<Product> products = new ArrayList<>();
+
+	public Category() {
+	}
+
 	public Category(Long id, String name) {
+		super();
 		this.id = id;
 		this.name = name;
 	}
@@ -22,7 +47,17 @@ public class Category implements Serializable{
 		return name;
 	}
 
-	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<Product> getProducts() {
+		return products;
+	}
 
 	@Override
 	public int hashCode() {
@@ -41,6 +76,4 @@ public class Category implements Serializable{
 		return Objects.equals(id, other.id);
 	}
 
-	
-	
 }

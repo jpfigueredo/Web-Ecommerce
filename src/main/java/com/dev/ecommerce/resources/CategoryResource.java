@@ -31,12 +31,12 @@ public class CategoryResource {
 
 	/*
 	 * No caminho, será / e um ID aleatório | Ex: /1 = list[1] Variavel 1 vai
-	 * encontrar o @PathVariable
+	 * encontrar o @PathVariable | Acha e pega
 	 */
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Category> findById(@PathVariable Long id) {
-		Category cat = categoryRepository.findById(id);
-		return ResponseEntity.ok().body(cat);
+		Category category = categoryRepository.findById(id).get();
+		return ResponseEntity.ok().body(category);
 	}
 
 }
