@@ -16,12 +16,13 @@
 
 ![image](https://user-images.githubusercontent.com/63759223/151647366-d8ea77a7-bfbf-41e4-8493-5987fd557719.png)
 </div>
-<div> 
+
 ```java
 //  As it is shown, Id notation says that the atribute is of type Id and @GeneratedValue(strategy = GenerationType.IDENTITY) autoincrements it
   @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 ```
+<div>
 <p>Once it is stablished in one side, it has to be on the other, like this.</p>
 
 ![image](https://user-images.githubusercontent.com/63759223/151647451-ca9de84c-7e4d-41cc-9abc-e993a6eaffaa.png)
