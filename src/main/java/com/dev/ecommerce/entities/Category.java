@@ -22,10 +22,6 @@ public class Category implements Serializable {
 	private Long id;
 	private String name;
 
-	/*
-	 * Diz para não serializar a lista | Faz a conexão entre Products e Category
-	 * pelo nome do atributo
-	 */
 	@JsonIgnore
 	@OneToMany(mappedBy = "category")
 	private List<Product> products = new ArrayList<>();

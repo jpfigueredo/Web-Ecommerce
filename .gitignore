@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+.DS_Store
+.metadata
+.mvn
+
+mvnw
+mvnw.cmd
+/Servers/

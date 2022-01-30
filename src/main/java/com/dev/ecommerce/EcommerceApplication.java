@@ -2,6 +2,10 @@ package com.dev.ecommerce;
 
 import java.util.Arrays;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -51,7 +55,7 @@ public class EcommerceApplication implements CommandLineRunner {
 		productRepository.save(p2);
 		productRepository.save(p3);
 		productRepository.save(p4);
-
+				
 	}
 
 }
